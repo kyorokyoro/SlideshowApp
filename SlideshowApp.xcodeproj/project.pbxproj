@@ -12,6 +12,10 @@
 		9E2392BA1E4DE7A100BF12CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2392B81E4DE7A100BF12CC /* Main.storyboard */; };
 		9E2392BC1E4DE7A100BF12CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E2392BB1E4DE7A100BF12CC /* Assets.xcassets */; };
 		9E2392BF1E4DE7A100BF12CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2392BD1E4DE7A100BF12CC /* LaunchScreen.storyboard */; };
+		9E2392C71E4DE85300BF12CC /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2392C61E4DE85300BF12CC /* ResultsViewController.swift */; };
+		9E5BD14C1E4EC7BD00EEDB2B /* ぷに背景画像候補.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E5BD14B1E4EC7BD00EEDB2B /* ぷに背景画像候補.jpg */; };
+		9E5BD14E1E4EC7CE00EEDB2B /* ぷに背景画像候補２.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E5BD14D1E4EC7CE00EEDB2B /* ぷに背景画像候補２.jpg */; };
+		9E5BD1501E4EC7D800EEDB2B /* ぷに背景画像候補３.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E5BD14F1E4EC7D800EEDB2B /* ぷに背景画像候補３.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		9E2392BB1E4DE7A100BF12CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E2392BE1E4DE7A100BF12CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E2392C01E4DE7A100BF12CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E2392C61E4DE85300BF12CC /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		9E5BD14B1E4EC7BD00EEDB2B /* ぷに背景画像候補.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ぷに背景画像候補.jpg"; sourceTree = "<group>"; };
+		9E5BD14D1E4EC7CE00EEDB2B /* ぷに背景画像候補２.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ぷに背景画像候補２.jpg"; sourceTree = "<group>"; };
+		9E5BD14F1E4EC7D800EEDB2B /* ぷに背景画像候補３.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ぷに背景画像候補３.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,13 @@
 				9E2392B41E4DE7A100BF12CC /* AppDelegate.swift */,
 				9E2392B61E4DE7A100BF12CC /* ViewController.swift */,
 				9E2392B81E4DE7A100BF12CC /* Main.storyboard */,
+				9E2392C61E4DE85300BF12CC /* ResultsViewController.swift */,
 				9E2392BB1E4DE7A100BF12CC /* Assets.xcassets */,
 				9E2392BD1E4DE7A100BF12CC /* LaunchScreen.storyboard */,
 				9E2392C01E4DE7A100BF12CC /* Info.plist */,
+				9E5BD14B1E4EC7BD00EEDB2B /* ぷに背景画像候補.jpg */,
+				9E5BD14D1E4EC7CE00EEDB2B /* ぷに背景画像候補２.jpg */,
+				9E5BD14F1E4EC7D800EEDB2B /* ぷに背景画像候補３.jpg */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -123,8 +135,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5BD14C1E4EC7BD00EEDB2B /* ぷに背景画像候補.jpg in Resources */,
 				9E2392BF1E4DE7A100BF12CC /* LaunchScreen.storyboard in Resources */,
 				9E2392BC1E4DE7A100BF12CC /* Assets.xcassets in Resources */,
+				9E5BD14E1E4EC7CE00EEDB2B /* ぷに背景画像候補２.jpg in Resources */,
+				9E5BD1501E4EC7D800EEDB2B /* ぷに背景画像候補３.jpg in Resources */,
 				9E2392BA1E4DE7A100BF12CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +153,7 @@
 			files = (
 				9E2392B71E4DE7A100BF12CC /* ViewController.swift in Sources */,
 				9E2392B51E4DE7A100BF12CC /* AppDelegate.swift in Sources */,
+				9E2392C71E4DE85300BF12CC /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +313,7 @@
 				9E2392C51E4DE7A100BF12CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
