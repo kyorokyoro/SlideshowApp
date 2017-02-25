@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,45 +22,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfX-ZM-Oij">
-                                <rect key="frame" x="92" y="480" width="70" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfX-ZM-Oij">
+                                <rect key="frame" x="134" y="480" width="70" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="OaG-cZ-I2y"/>
+                                    <constraint firstAttribute="height" constant="136" id="TBo-UL-KQn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="136" id="YxJ-Wr-TKs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Z8T-BK-OYb"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="127" id="fCj-Mp-gc6"/>
+                                </constraints>
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="moveon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rhf-Uu-KP6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmz-a0-6Ec">
-                                <rect key="frame" x="160" y="480" width="70" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmz-a0-6Ec">
+                                <rect key="frame" x="202" y="480" width="70" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="Tj0-Sx-RYd"/>
+                                    <constraint firstAttribute="width" constant="70" id="zYl-db-iUK"/>
+                                </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="goback:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8pH-qc-cM3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsu-KP-ZRb">
-                                <rect key="frame" x="252" y="480" width="70" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsu-KP-ZRb">
+                                <rect key="frame" x="294" y="480" width="70" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="7q3-sm-CTj"/>
+                                    <constraint firstAttribute="height" constant="136" id="gwl-Ze-Ext"/>
+                                </constraints>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="startandpause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RTY-KP-3ZU"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-Sm-kRR">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-Sm-kRR">
                                 <rect key="frame" x="0.0" y="45" width="414" height="359"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="359" id="zn0-TL-QHw"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bA6-7e-hza" appends="YES" id="GzE-h2-5nW"/>
                                 </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rmz-a0-6Ec" firstAttribute="top" secondItem="jgb-Sm-kRR" secondAttribute="bottom" constant="76" id="6zh-ni-U8M"/>
+                            <constraint firstItem="Lsu-KP-ZRb" firstAttribute="leading" secondItem="rmz-a0-6Ec" secondAttribute="trailing" constant="22" id="RAk-er-KJ8"/>
+                            <constraint firstItem="jgb-Sm-kRR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="REF-bQ-p6o"/>
+                            <constraint firstItem="Lsu-KP-ZRb" firstAttribute="top" secondItem="jgb-Sm-kRR" secondAttribute="bottom" constant="76" id="auD-fD-Qen"/>
+                            <constraint firstItem="DfX-ZM-Oij" firstAttribute="top" secondItem="jgb-Sm-kRR" secondAttribute="bottom" constant="76" id="hDh-uh-xjJ"/>
+                            <constraint firstItem="Lsu-KP-ZRb" firstAttribute="leading" secondItem="DfX-ZM-Oij" secondAttribute="trailing" constant="90" id="piR-zp-X1U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lsu-KP-ZRb" secondAttribute="trailing" constant="30" id="qK5-vG-CnU"/>
+                            <constraint firstItem="jgb-Sm-kRR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s38-7Z-L4d"/>
+                            <constraint firstAttribute="trailing" secondItem="jgb-Sm-kRR" secondAttribute="trailing" id="v30-g7-xLB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="back" destination="rmz-a0-6Ec" id="HAy-lL-19N"/>
                         <outlet property="imageView" destination="jgb-Sm-kRR" id="pZe-ty-Mxa"/>
                         <outlet property="move" destination="DfX-ZM-Oij" id="TlO-DV-Uzf"/>
+                        <outlet property="startpause" destination="Lsu-KP-ZRb" id="Nhg-bl-9J2"/>
                         <segue destination="hxA-u4-iRl" kind="show" identifier="result" id="Qo4-Ww-It3"/>
                     </connections>
                 </viewController>
@@ -84,13 +111,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lrc-Pc-U2P">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lrc-Pc-U2P">
                                 <rect key="frame" x="0.0" y="38" width="414" height="660"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBm-Sm-xpM">
-                                <rect key="frame" x="-4" y="706" width="418" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBm-Sm-xpM">
+                                <rect key="frame" x="-2" y="640" width="418" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="Iz9-Pm-bYp"/>
+                                    <constraint firstAttribute="width" constant="418" id="zEg-IF-vSi"/>
+                                </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="MrK-yt-5a7" kind="unwind" unwindAction="unwindWithSegue:" id="sJk-H8-SI2"/>
@@ -98,6 +127,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Lrc-Pc-U2P" secondAttribute="trailing" id="4iV-37-uJl"/>
+                            <constraint firstItem="CBm-Sm-xpM" firstAttribute="centerX" secondItem="srh-8a-tkH" secondAttribute="centerX" id="Ux2-vb-6uK"/>
+                            <constraint firstAttribute="bottom" secondItem="CBm-Sm-xpM" secondAttribute="bottom" constant="-40" id="ZWZ-YX-wnW"/>
+                            <constraint firstItem="TOM-wN-KOd" firstAttribute="top" secondItem="Lrc-Pc-U2P" secondAttribute="bottom" constant="38" id="aYr-Lv-0Tx"/>
+                            <constraint firstItem="Lrc-Pc-U2P" firstAttribute="top" secondItem="pba-IR-dm9" secondAttribute="bottom" constant="18" id="gVD-Lr-Zwb"/>
+                            <constraint firstItem="Lrc-Pc-U2P" firstAttribute="leading" secondItem="srh-8a-tkH" secondAttribute="leading" id="ill-cg-g0U"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="back" destination="CBm-Sm-xpM" id="9r0-3t-ett"/>

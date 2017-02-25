@@ -62,6 +62,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var back: UIButton!
    
+    @IBOutlet weak var startpause: UIButton!
+    
     @IBAction func startandpause(_ sender: UIButton) {
        
         //timerが動いてるなら.
@@ -133,6 +135,20 @@ class ViewController: UIViewController {
         let resultsViewController:ResultsViewController = segue.destination as! ResultsViewController
         // 遷移先のResultViewControllerで宣言しているnameに値を代入して渡す
         resultsViewController.largerImage = imageView.image!
+       
+        if timer.isValid == true {
+            
+            //timerを破棄する.
+            timer.invalidate()
+            
+            //ボタンのタイトル変更.
+            startpause.setTitle("再生", for: UIControlState.normal)
+            
+            //ボタンを停止
+            move.isEnabled = true
+            back.isEnabled = true
+            
+        }
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
